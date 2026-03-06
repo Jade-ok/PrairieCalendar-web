@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrairieCalendar - Export Schedule to Google Calendar</title>
+    <style>
+        :root {
+            --blueberry: #2c3e50; /* Deep Blueberry text */
+            --pie-crust: #d4af37; /* Pie Crust Gold accent */
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 2rem; color: #333; }
+        h1 { color: var(--blueberry); }
+        h2 { color: var(--blueberry); margin-top: 2rem; border-bottom: 2px solid var(--pie-crust); padding-bottom: 0.5rem; display: inline-block; }
+        .hero { font-size: 1.2rem; color: #555; margin-bottom: 2rem; }
+        .badge { background-color: var(--blueberry); color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-right: 0.3rem; }
+        ul { margin-bottom: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.9rem; text-align: center; color: #666; }
+        a { color: var(--blueberry); text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; color: var(--pie-crust); }
+    </style>
+</head>
+<body>
+    <h1>🫐 PrairieCalendar</h1>
+    <p class="hero">A Chrome extension that extracts PrairieTest schedules and allows you to export them to your Google Calendar or as an .ics file with ease. Built with ❤️ by Team BlueberryPie (Jena & Jade).</p>
+    
+    <h2>✨ What It Does</h2>
+    <ul>
+        <li><strong>Smart Extraction:</strong> Parses exam titles, dates, times, and locations directly from the <code>us.prairietest.com</code> webpage.</li>
+        <li><strong>Selective Exporting:</strong> Clean checkbox UI allows users to select specific events to export.</li>
+        <li><strong>Instant .ics Generation:</strong> Converts your selected schedules into a valid iCalendar file locally.</li>
+        <li><strong>Google Calendar Integration:</strong> Export your selected schedules directly to Google Calendar with one click. Events are added instantly via the Google Calendar API with built-in duplicate detection.</li>
+    </ul>
+
+    <h2>🔒 Permissions Explained</h2>
+    <p>PrairieCalendar only requests the minimum permissions necessary to function. There is no external database; all processing is done locally to protect student data.</p>
+    <ul>
+        <li><span class="badge">storage</span> Used to store parsed reservation data locally on your device via Chrome's <code>storage.local</code> API.</li>
+        <li><span class="badge">identity</span> Used to securely authenticate with Google via OAuth 2.0 if you choose to export to Google Calendar.</li>
+        <li><span class="badge">host permissions</span> We strictly limit data extraction to the PrairieTest domain (<code>https://us.prairietest.com/*</code>) and communication to Google APIs (<code>https://www.googleapis.com/*</code>).</li>
+    </ul>
+
+    <h2>📫 Contact</h2>
+    <p>For questions, bug reports, or feature requests, feel free to reach out:<br>
+    <strong>team-blueberrypie@googlegroups.com</strong></p>
+
+    <div class="footer">
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+        <p>&copy; 2026 Team BlueberryPie. All rights reserved.</p>
+    </div>
+</body>
+</html>
